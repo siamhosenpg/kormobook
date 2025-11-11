@@ -1,6 +1,6 @@
 import React from "react";
-import Statusbox from "../../components/Statusbox";
-import Button from "../../components/buttons/Button";
+import Statusbox from "../../ui/Statusbox";
+import Button from "../../ui/buttons/Button";
 import { LiaUserEditSolid } from "react-icons/lia";
 import { FiPhone } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";

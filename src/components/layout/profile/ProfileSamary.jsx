@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../components/buttons/Button";
+
 import { SlBadge } from "react-icons/sl";
 
 const ProfileSamary = ({ user }) => {

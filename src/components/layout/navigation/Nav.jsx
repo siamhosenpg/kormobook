@@ -1,5 +1,4 @@
 import React from "react";
-import { extraNavData } from "../../assets/Projectdata/navdata";
 
 import { IoSearch } from "react-icons/io5";
 import { MdOutlineDarkMode } from "react-icons/md";

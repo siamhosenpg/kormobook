@@ -1,6 +1,6 @@
 import React from "react";
-import { navData } from "../../assets/Projectdata/navdata";
-import useGo from "../../hook/useNavigation";
+import { navData } from "../../../assets/Projectdata/navdata";
+import useGo from "../../../hook/useNavigation";
 
 const Leftnav = () => {
   const go = useGo();

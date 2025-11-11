@@ -1,9 +1,16 @@
-import React from "react";
-import ProjectBox from "../components/card/ProjectBox";
-import { useProject } from "../context/ProjectContext";
+import React, { useEffect } from "react";
+import ProjectBox from "../components/ui/card/ProjectBox";
+import { useProjectStore } from "../store/useProjectStore";
 
 const Projects = () => {
-  const { Project } = useProject();
+  const { Project, LoadingProject, fetchProject, deleteProject } =
+    useProjectStore();
+  useEffect(() => {
+    fetchProject();
+  }, [fetchProject]);
+
+  if (LoadingProject) return <p>Loading Projects...</p>;
+
   return (
     <div className="Pagearea Toparea  z-0">
       <ul className="    w-[100%] bg-background flex items-center justify-between px-8 py-4 border-b border-border-secondary ">

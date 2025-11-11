@@ -1,9 +1,16 @@
-import React from "react";
-import { useTeams } from "../context/TeamsContext";
-import Teambox from "../components/Teambox";
+import React, { useEffect } from "react";
+import { useTeamStore } from "../store/useTeamStore";
+import Teambox from "../components/ui/Teambox";
 
 const Teams = () => {
-  const { Teams, loading } = useTeams();
+  const { Teams, loading, fetchTeam, deleteTeam } = useTeamStore();
+
+  useEffect(() => {
+    fetchTeam();
+  }, [fetchTeam]);
+
+  if (loading) return <p>Loading Teams...</p>;
+
   return (
     <div className="Pagearea Toparea">
       {loading ? (

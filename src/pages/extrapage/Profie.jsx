@@ -1,12 +1,14 @@
 import React from "react";
-import { useEmployees } from "../../context/EmployeeContext";
+
+import { useEmployeeStore } from "../../store/employeeStore";
 import { useParams } from "react-router-dom";
-import Profiletop from "../../ui/profile/Profiletop";
-import ProfileSamary from "../../ui/profile/ProfileSamary";
-import ProfileCountingbox from "../../components/card/ProfileCountingbox";
+import Profiletop from "../../components/layout/profile/Profiletop";
+import ProfileSamary from "../../components/layout/profile/ProfileSamary";
+import ProfileCountingbox from "../../components/ui/card/ProfileCountingbox";
 
 const Profie = () => {
-  const { employees, loading } = useEmployees();
+  const { employees, loading, fetchEmployees, deleteEmployee } =
+    useEmployeeStore();
   const { emp_id } = useParams();
 
   const user = employees.find((u) => u.emp_id === parseInt(emp_id));

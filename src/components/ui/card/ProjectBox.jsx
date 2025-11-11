@@ -1,5 +1,4 @@
 import React from "react";
-import Statusbox from "../Statusbox";
 import { IoMdLink } from "react-icons/io";
 import { TbHandClick } from "react-icons/tb";
 import ProjectStatusIcon from "../ProjectStatusIcon";
