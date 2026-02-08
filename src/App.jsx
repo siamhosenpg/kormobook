@@ -9,6 +9,7 @@ import Teams from "./pages/Teams";
 import Projects from "./pages/Projects";
 
 import Profie from "./pages/extrapage/Profie";
+import Announcement from "./pages/Announcement";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/employees" element={<Members />} />
                 <Route path="/teams" element={<Teams />} />
                 <Route path="/projects" element={<Projects />} />
+                <Route path="/announcement" element={<Announcement />} />
                 <Route path="/profile/:emp_id" element={<Profie />} />
               </Routes>
             </div>
